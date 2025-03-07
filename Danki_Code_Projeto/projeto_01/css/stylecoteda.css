@@ -1,0 +1,465 @@
+@font-face{
+	font-family: Provan;
+	src: url("../fonts/ProvanFormal-Regular.otf");
+
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Provan;
+	color: rgba(0, 0, 0, 0.77);
+}
+
+html, body{
+	height: 100%;
+}
+
+.clear{
+	clear: both;
+}
+
+/*dimensões cabeçalho e footer*/
+
+.header, .footer{
+	width: 100%;
+	height: 95px;
+	background-color: rgba(130, 130, 130, 0.35);	
+}
+/**/
+
+/*posiciona os elementos*/
+.position{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*Estiliza cabeçalho*/
+.header .imagens .logo1{
+	position: absolute;
+	left: 10px;
+	bottom: 50%;
+	transform: translateY(50%);
+	width: 200px;
+}
+
+.header .imagens #logo2{
+	position: absolute;
+	right: 10px;
+	bottom: 50%;
+	transform: translateY(50%);
+	width: 200px;
+}
+/**/
+
+/*form*/
+.main-page{
+	width: 100%;
+	height: auto;	
+}
+
+.bg-form{
+	position: relative;
+	width: 100%;
+	height: 730px;
+	background-image: url("../imagens/bg-form.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.form{
+	position: relative;
+	top: 15px;
+	right: 60px;
+	float: right;
+	width: 500px;
+	height: 96%;
+	background-color: rgba(240, 240, 240, 0.7);
+}
+
+.header-form{
+	padding: 40px 30px;
+	background-color: rgba(230, 230, 230, 0.7);
+}
+
+.text-header h2{
+	width: 100%;
+	font-weight: normal;
+}
+
+.form .input, .campos-obg{
+	padding: 0 40px;
+	padding-top: 35px;
+}
+
+.form .input h2{
+	font-weight: normal;
+	font-size: 18px;
+	padding-bottom: 5px;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.form .input input{
+	padding: 20px 10px;
+	width: 90%;
+	border: 0px;
+}
+
+.form .input > input[type="submit"]{
+	padding: 20px 5px;
+	width: 90%;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	background-color: rgba(10, 63, 86, 1.0);
+}
+
+.campos-obg h2{
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.seta{
+	position: absolute;
+	left: 50%;
+	bottom: -35px;
+	transform: translateX(-50%);
+}
+/**/
+
+/*mosaico*/
+.mosaico{
+	text-align: center;
+	width: 100%;
+	height: 270px;
+	padding: 4%;
+	background-color: rgba(224, 230, 232, 0.7);
+	margin-bottom: 5px;
+}
+
+.mosaico:last-of-type{
+	margin-bottom: 0;
+}
+
+.mosaico h2{
+	font-weight: normal;
+	font-size: 50px;
+}
+
+.mosaico .text, .mosaico-img .text-img{
+	margin-top: 20px;
+	font-size: 28px;
+}
+
+.mosaico .text p{
+	margin-bottom: 20px;
+}
+
+.mosaico:last-of-type .text p:last-child{
+	font-size: 24px;
+	text-align: left;
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	line-height: 40px;
+}
+
+.mosaico-img{
+	width: 100%;
+	height: 400px;
+	background-color: rgba(224, 241, 251, 1.0);
+	margin-bottom: 5px;
+}
+
+.text-img{
+	line-height: 45px;
+	padding: 8% 4%;
+	text-align: left;
+	width: 43%;
+	float: left;
+}
+
+.bg-mosaico{
+	width: 57%;
+	height: 400px;
+	float: left;
+}
+
+.bg-mosaico img{
+	width: 100%;
+	height: 400px;
+}
+/**/
+
+/*Estilizando rodapé*/
+.footer .imagens{
+	padding-top: 15px;
+	position: initial;
+	width: 200px;
+	margin: 0 auto;
+}
+/**/
+
+/*Design responsivo 1600px*/
+
+@media (max-width: 1600px){
+	.main-page > .position, .header > .position{
+		width: 100%;
+	}	
+}
+/**/
+
+/*Design responsivo 1198px*/
+
+@media (max-width: 1198px){
+	.main-page > .position, .header > .position{
+		width: 100%;
+	}
+
+	.bg-form{
+		width: 100%;
+	}
+
+	.form{
+		text-align: center;
+		float: unset;
+		position: absolute;
+		left: 50%;
+		height: 91%;
+		transform: translateX(-50%);
+	}
+
+}
+/**/
+
+/*Design responsivo 853px*/
+
+@media (max-width: 853px){
+	.bg-form{
+		width: 100%;
+		height: 850px;
+	}
+
+	.form{
+		text-align: center;
+		float: unset;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 700px;
+		transform: translate(-50%, -50%);
+	}
+
+	.mosaico-img{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+		width: 100%;
+		height: 600px;
+		background-color: rgba(224, 241, 251, 1.0);
+		margin-bottom: 10px;
+	}
+
+	.mosaico-img .text-img {
+	    line-height: 45px;
+		text-align: center;
+		width: 100%;
+		padding: 15px;
+		float: unset;
+
+	}
+
+	.texto{
+		font-size: 22px;
+	}
+
+	.mosaico-img .text-img {
+	    line-height: 30px;
+		text-align: center;
+		width: 100%;
+		font-size: 24px;
+		float: unset;
+	}
+
+	.mosaico:last-of-type .text p:first-child{
+		font-size: 22px;
+	}
+	
+	.mosaico:last-of-type .text p:last-child{
+		font-size: 18px;
+		text-align: left;
+		text-decoration: underline;
+		text-underline-offset: 5px;
+		line-height: 32px;
+	}
+
+	.mosaico h2{
+		font-size: 35px;
+		padding-top: 20px;
+	}
+
+	.mosaico:first-of-type .text p{
+		padding-top: 10px;
+		font-size: 28px;
+	}
+
+	.bg-mosaico{
+		width: 100%;
+		height: 450px;
+		float: unset;
+	}
+
+	.bg-mosaico:nth-of-type(1), .bg-mosaico:nth-of-type(2){
+		order: 1;
+	}
+
+	.text-img:nth-of-type(1), .text-img:nth-of-type(2){
+		order: 2;
+	}
+
+	.bg-mosaico img{
+		width: 100%;
+		height: 450px;
+	}
+}
+/**/
+
+/*Design responsivo 632px*/
+@media (max-width: 632px){
+
+	.mosaico-img{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+		width: 100%;
+		height: 600px;
+		background-color: rgba(224, 241, 251, 1.0);
+		margin-bottom: 10px;
+	}
+
+	.texto{
+		font-size: 18px;
+	}
+
+	.mosaico-img .text-img {
+	    line-height: 30px;
+		text-align: center;
+		width: 100%;
+		font-size: 24px;
+		float: unset;
+	}
+
+	.mosaico:last-of-type .text p:first-child{
+		font-size: 22px;
+	}
+
+	.mosaico:last-of-type .text p:last-child{
+		font-size: 18px;
+		text-align: left;
+		text-decoration: underline;
+		text-underline-offset: 5px;
+		line-height: 32px;
+	}
+
+	.mosaico h2{
+		font-size: 35px;
+		padding-top: 20px;
+	}
+
+	.mosaico:first-of-type .text p{
+		padding-top: 10px;
+		font-size: 28px;
+	}
+
+}
+/**/
+
+/*Design responsivo 550px*/
+
+@media (max-width: 550px){
+	.form{
+		width: 85%;
+	}
+
+	.header{
+		height: 200px;
+	}
+
+	.header .imagens{
+		margin: 0 auto;
+		width: fit-content;
+		padding: 20px 0;
+	}
+
+	.header .imagens .logo1{
+		position: unset;
+		width: 200px;
+		transform: none;
+	}
+
+	.header .imagens #logo2{
+		position: unset;
+		width: 200px;
+		transform: none;
+	}
+
+	.mosaico h2{
+		font-size: 35px;
+		padding-top: 20px;
+	}
+
+	.mosaico:first-of-type .text p{
+		padding-top: 10px;
+		font-size: 28px;
+	}
+
+	.mosaico-img{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+		width: 100%;
+		height: 500px;
+		background-color: rgba(224, 241, 251, 1.0);
+		margin-bottom: 10px;
+	}
+
+	.texto{
+		font-size: 18px;
+	}
+
+	.mosaico-img .text-img {
+	    line-height: 30px;
+		text-align: center;
+		width: 100%;
+		font-size: 24px;
+		float: unset;
+	}
+
+	.bg-mosaico{
+		width: 100%;
+		height: 350px;
+		float: unset;
+	}
+
+	.bg-mosaico:nth-of-type(1), .bg-mosaico:nth-of-type(2){
+		order: 1;
+	}
+
+	.text-img:nth-of-type(1), .text-img:nth-of-type(2){
+		order: 2;
+	}
+
+	.bg-mosaico img{
+		width: 100%;
+		height: 350px;
+	}
+}
+/**/

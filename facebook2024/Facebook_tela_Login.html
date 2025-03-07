@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Tela de Login Facebook</title>
+
+		<meta name="description" content="Tela de login do Facebook 2024 para portfólio">
+
+		<meta name="keywords" content="Facebook, CSS3, Html5, login">
+
+		<meta name="author" content="Matheus Pincelli Fernandes">
+
+		<link rel="stylesheet" type="text/css" href="css/style_facebook.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+	</head>
+	
+	<body>
+
+		<header class="login">
+			<div class="center">
+				<div class="logo">
+					<h2>Facebook</h2>
+				</div>
+				
+				<form method="post" class="form-login">
+					<div class="form-element form-login">
+						<p>Email ou telefone:</p>
+						<input type="email" name="email">
+					</div>
+
+					<div class="form-element form-login">
+						<p>Senha:</p>
+						<input type="password" name="senha">
+					</div>
+
+					<div class="form-element">
+						<input type="submit" name="acao" value="Enviar">
+					</div>
+				</form>
+				<div class="clear"></div>
+			</div>
+		</header>
+
+		<section class="main">
+			<div class="center">
+				<div class="img-pessoas">
+					<img src="imagens/facebook_login.png">
+				</div>
+
+				<div class="abrir-conta">
+					<h2>Abra sua conta</h2>
+					<h3>É gratuito e sempre será</h3>
+					
+					<form class="criar-conta">
+						<div class="w50">
+							<input placeholder="Nome" type="text">
+						</div>
+
+						<div class="w50">
+							<input placeholder="Sobrenome" type="text">
+						</div>
+
+						<div class="w100">
+							<input placeholder="E-mail" type="email">
+						</div>
+
+						<div class="w100">
+							<input placeholder="Senha" type="password">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="w100">
+							<h2>Data de Nascimento:</h2>
+							<select name="nascimento-dia" class="nascimento">
+							    <?php
+							        for ($i = 1; $i <= 31; $i++){
+							        	$selected = ($i == 5) ? "selected" : "";
+							        	echo "<option value='{$i}' $selected>$i</option>";
+							        }
+							    ?>  
+							</select>
+
+
+							<select name="nascimento-mes" class="nascimento">
+								<?php
+									$lista = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]; 
+									for($i = 0; $i <= 11; $i++){
+										$selected = ($lista[$i] == "Julho") ? "selected" : "";
+       									echo "<option value='{$lista[$i]}' $selected>{$lista[$i]}</option>";
+       								}
+								?>
+							</select>
+
+							<select name="nascimento-ano" class="nascimento">
+								<?php 
+									for($i = 1960; $i <= 2025; $i++){
+										$selected = ($i == 1990) ? "selected" : "";
+										echo "<option value='{$i}' $selected>$i</option>";
+									}
+								?>
+							</select>
+							<div class="clear"></div>
+						</div>
+
+						<div class="w100">
+							<div class="input-radio">
+								<input type="radio" value="masculino" name="sexo">
+								<h2>Masculino</h2>
+							</div>
+							<div class="input-radio">
+								<input type="radio" value="feminino" name="sexo">
+								<h2>Feminino</h2>	
+							</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="w100">
+							<input type="submit" name="acao" value="Cadastrar">
+						</div>
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</section>
+
+		<section class="linguas">
+			<div class="center">
+				<a class="selected-lingua" href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="center">
+				<a class="selected-lingua" href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+				<a href="#">Português (BR)</a>
+			</div>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,778 @@
+@font-face{
+	font-family: Provan;
+	src: url("../fonts/ProvanFormal-Regular.otf");
+}
+
+@font-face{
+	font-family: "Provan Light";
+	src: url("../fonts/ProvanFormal-Light.otf");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clear{
+	clear: both;
+}
+
+html, body{
+	height: 100%;
+	font-family: "Provan Light";
+	z-index: 50;
+}
+
+/*Posiciona os elementos*/
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+}
+/**/
+
+/*Estilizando Header/logo e menu*/
+
+header .logo{
+	float: left;
+	width: 160px;
+	height: 20px;
+	background-image: url("../imagens/logo.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+header{
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	height: 90vh;
+	padding: 40px;
+	background-image: url("../imagens/capa.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+header nav{
+	float: right;
+	font-family: "Provan";
+}
+
+nav.mobile-menu{
+	display: none;
+}
+
+
+header nav.desktop-menu ul{
+	list-style-type: none;
+}
+
+header nav.desktop-menu li{
+	float: left;
+	padding: 0 20px;
+}
+
+header nav.desktop-menu li a{
+	color: white;
+	text-decoration: none;
+}
+
+.chamada1{
+	width: 35%;
+	position: absolute;
+	left: 70%;
+	top: 40%;
+	transform: translate(-70%, -40%);
+}
+
+.chamada1 h2, .chamada1 p{
+	color: white;
+	width: 95%;
+	font-size: 50px;
+	font-weight: normal;
+}
+
+.chamada1 p{
+	font-size: 15px;
+	line-height: 25px;
+}
+/**/
+
+/*sessao1 info site*/
+section.sessao1{
+	position: relative;
+	width: 100%;
+	background-color: #472562;
+	padding: 40px 2%;
+	height: 350px;
+}
+
+section.sessao1 > .container{
+	max-width: 1000px;
+}
+
+.texto-sessao1{
+	float: left;
+	color: white;
+	width: 51%;
+	font-size: 25px;
+}
+
+.texto-sessao1 h2{
+	font-weight: bold;
+}
+
+.texto-sessao1 p{
+	padding: 20px 0 10px 0;
+	font-size: 18px;
+}
+
+.texto-sessao1 ul{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	padding-left: 18px;
+	list-style-position: outside;
+}
+
+.texto-sessao1 ul li{
+	letter-spacing: 1.8px;
+	padding: 5px 0px;
+	width: 100%;
+}
+
+.btn1-texto{
+	text-align: center;
+	line-height: 44px;
+	margin-top: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #ff703d;
+	width: 165px;
+	height: 44px;
+	cursor: pointer;
+	border-radius: 30px;
+}
+
+.btn1-texto a{
+	text-decoration: none;
+	color: white;
+}
+
+.device-sessao1{
+	position: absolute;
+	top: -50px;
+	right: 50px;
+	width: 50%;
+	height: 400px;
+	background-image: url("../imagens/device.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left;
+}
+/**/
+
+/*sessao2 info site*/
+.sessao2{
+	padding-top: 40px;
+	padding-right: 2%;
+	padding-left: 2%;
+	text-align: center;
+	background-color: white;
+}
+
+.sessao2 > .container{
+	max-width: 1000px;
+}
+
+.sessao2 h2{
+	color: #472663;
+	font-weight: normal;
+}
+
+.sessao2 p{
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.sessao2 img{
+	position: relative;
+	top: 60px;
+	width: 100%;
+	margin: 0;
+}
+/**/
+
+/*sessao3 info site e sobe autor*/
+.sessao3{
+	width: 100%;
+}
+
+.part1{
+	color: white;
+	float: left;
+	width: 50%;
+	padding: 140px 0 90px 0;
+	background-color: #835fa7;
+}
+
+.wraper-part1{
+	max-width: 600px;
+	float: right;
+	padding:0 30px;
+}
+
+.part1 h2{
+	font-style: italic;
+	font-size: 23px;
+}
+
+.part1 p{
+	font-size: 15px;
+	line-height: 35px;
+	margin-top: 10px;
+}
+
+.part2{
+	float: left;
+	width: 50%;
+	padding: 140px 0 90px 0;
+	background-color: white
+}
+
+.sobre-autor{
+	float: left;
+	max-width: 600px;
+	overflow: hidden;
+	padding: 0 30px;
+}
+
+#two.off, #tree.off, #one.off{
+	display: none;
+}
+
+.titulo-autor{
+	float: left;
+	width: 100%;
+}
+
+.wraper-titulo-autor{
+	float: left;
+}
+
+.titulo-autor h2{
+	color: #232323;
+	font-size: 23px;
+	font-weight: normal;
+	padding-right: 20px;
+}
+
+.titulo-autor p{
+	font-size: 13px;
+	color: #232323;
+	font-style: italic;
+	font-weight: normal;
+	padding-right: 20px;
+}
+
+.titulo-autor .img-autor{
+	float: left;
+	width: 40px;
+	height: 40px;
+	background-image: url("../imagens/atom.png");
+	background-size: cover;
+	background-position: center;
+	background-color: transparent;
+	border-radius: 20px;
+}
+
+.texto-autor{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.texto-autor p{
+	color: #232323;
+	font-size: 15px;
+}
+
+.slider-bullets{
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+
+.slider-bullets span{
+	width: 12px;
+	height: 12px;
+	border-radius: 8px;
+	float: left;
+	cursor: pointer;
+	margin-right: 8px;
+	background-color: rgba(200, 200, 200, 1.0);
+}
+/**/
+
+/*sessao4 form e contato*/
+section.sessao4{
+	background-color: #472563;
+	padding: 60px 0;
+}
+
+.form{
+	float: left;
+	width: 50%;
+	color: white;
+}
+
+.form h2{
+	font-size: 23px;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+.form p{
+	font-size: 15px;
+	font-weight: normal;
+	max-width: 400px;
+	padding-right: 10px;
+}
+
+.form form{
+	margin-top: 15px;
+}
+
+.form form input[type="text"]{
+	width: 90%;
+	max-width: 480px;
+	margin-top: 8px;
+	height: 58px;
+	padding-left: 8px;
+	line-height: 58px;
+	border: 1px solid rgb(200, 200, 200);
+}
+
+.form form textarea{
+	width: 90%;
+	max-width: 480px;
+	margin-top: 8px;
+	padding: 15px;
+	border: 1px solid rgb(200, 200, 200);
+	height: 160px;
+}
+
+.form form input[type="submit"]{
+	color: white;
+	border: 0px;
+}
+/**/
+
+/*Google maps*/
+.map-wraper{
+	float: left;
+	width: 50%;
+	padding: 0 10px;
+	color: white;
+}
+
+.map-wraper h2{
+	font-size: 23px;
+	font-weight: 300px;
+}
+
+.map-wraper3{
+	position: relative;
+	width: 100%;
+	max-width: 480px;
+	height: 480px;
+}
+
+.map-wraper2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 10px;
+	width: 100%;
+	padding-top: 100%;
+}
+
+.map{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 5px solid rgb(200, 200, 200);
+}
+
+.map iframe{
+	width: 100%;
+	height: 100%;
+}
+/**/
+
+/*rodapé*/
+
+footer{
+	padding: 40px 0;
+	background-color: #192123;
+	color: white;
+}
+
+footer p:first-child{
+	float: left;
+	font-size: 14px;
+}
+
+footer p:last-child{
+	float: right;
+	font-size: 14px;
+}
+/**/
+
+/*Design responsivo e side-bar menu*/
+@media (max-width: 950px){
+	header .logo{
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 260px;
+		height: 32px;
+		transition: width 0.3s ease-in;
+	}
+
+	header .logo.desactive{
+		width: 0px;
+	}
+
+	header{
+		position: relative;
+		width: 100%;
+		height: auto;
+		min-height: 800px;
+		padding: 0;
+		background-image: url("../imagens/capa.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.chamada1{
+		position: absolute;
+		width: 75%;
+		text-align: center;
+		left: 50%;
+		top: 60%;
+		transform: translate(-50%, -60%);
+	}
+
+	header .mobile-header{
+		position: relative;
+		width: 100%;
+		height: 142px;
+		background-color: rgba(0, 0, 90, 1.0);
+	}	
+
+	.chamada1 h2, .chamada1 p{
+		color: white;
+		font-size: 50px;
+		width: 100%;
+		font-weight: normal;
+	}
+
+	.chamada1 p{
+		font-size: 15px;
+		padding-top: 20px;
+		line-height: 25px;
+	}
+
+	nav.desktop-menu{
+		display: none;
+	}
+
+	nav.mobile-menu{
+		display: block;
+	}
+
+	nav.mobile-menu .checkbox{
+		display: none;
+	}
+
+	nav.mobile-menu .rotulo{
+		position: absolute;
+		top: 50%;
+		right: 40px;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		background-color: rgba(255, 255, 255, 1);
+		cursor: pointer;
+		z-index: 100;
+		border-radius: 8px;
+	}
+
+	nav.mobile-menu .rotulo img{
+		position: relative;
+		top: 4px;
+		left: 4px;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav.mobile-menu .menu-left{
+		position: fixed;
+		left: -250px;
+		top: 0;
+		width: 250px;
+		height: 100vh;
+		background-color: rgba(0, 0, 90, 1.0);
+		transition: left 0.3s ease-in;
+		z-index: 100;
+	}
+
+	.logo-menu{
+		position: absolute;
+		background-color: rgba(0, 0, 70, 1.0);
+		width: 250px;
+		transition: width 0.3s ease-in;
+	}
+
+	.logo-menu.animation{
+		width: 0px;
+	}
+
+	nav.mobile-menu .menu-left ul{
+		position: absolute;
+		list-style-type: none;
+		font-size: 30px;
+		top: 27%;
+		left: 50%;
+		transform: translate(-50%, -27%);
+	}
+
+	nav.mobile-menu .menu-left ul li{
+		padding: 12.5px 0px;
+	}
+
+	nav.mobile-menu .menu-left ul li a{
+		text-decoration: none;
+		color: white;
+	}
+
+	.overlay {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.5); /* Transparência no fundo */
+	    opacity: 0;
+	    pointer-events: none; /* Não bloqueia cliques quando invisível */
+	    transition: opacity 0.3s ease-in-out;
+	}
+
+	.overlay.active{
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	nav.mobile-menu .checkbox:checked ~ .menu-left{
+		left: 0;
+	}
+
+	section.sessao1{
+		position: relative;
+		width: 100%;
+		background-color: #472562;
+		padding: 40px 2%;
+		height: auto;
+	}
+
+	section.sessao1 > .container{
+		max-width: 1000px;
+	}
+
+	.texto-sessao1{
+		text-align: center;
+		display: block;
+		float: none;
+		color: white;
+		width: 90%;
+		padding-left: 0;
+		margin: 0 auto;
+		font-size: 25px;
+	}
+
+	.texto-sessao1 p{
+		width: fit-content;
+		margin: 0 auto;
+		padding: 30px 0 20px 0;
+		font-size: 18px;
+	}
+
+	.texto-sessao1 ul{
+		text-align: left;
+		display: block;
+		font-size: 16px;
+		width: fit-content;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+
+	.texto-sessao1 ul li{
+		letter-spacing: 1.8px;
+		padding: 10px 0px;
+		width: 100%;
+	}
+
+
+	.device-sessao1{
+		position: static;
+		width: 0;
+		height: 0;
+	}
+
+	.btn1-texto{
+		text-align: center;
+		line-height: 44px;
+		margin-top: 20px;
+		font-size: 16px;
+		font-weight: bold;
+		background-color: #ff703d;
+		width: 165px;
+		height: 44px;
+		cursor: pointer;
+		border-radius: 30px;
+		margin: 20px auto;
+	}
+
+	.sessao2{
+		padding-top: 40px;
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+}
+
+@media (max-width: 777px){
+	.part1{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.wraper-part1{
+		max-width: 600px;
+		float: none;
+		padding:0 40px;
+	}
+
+	.part2{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.sessao2 img{
+		top: 16px;
+		margin-top: 20px;
+	}
+
+	section.sessao4{
+		text-align: center;
+	}
+
+	.form{
+		float: none;
+		width: 100%;
+	}
+
+	.form p{
+		display: inline-block;
+		padding-top: 10px;
+		float: none;
+	}
+
+	.map-wraper3{
+		display: inline-block;
+		width: 100%;
+		height: 280px;
+		max-width: none;
+	}
+
+	.map-wraper2{
+		height: 90%;
+		padding-top: 0;
+	}
+
+	.map-wraper{
+		float: none;
+		width: 100%;
+		margin-top: 40px;
+		padding: 0 4%;
+	}
+
+}
+
+
+@media (max-width: 716px){
+	.part1{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.wraper-part1{
+		max-width: 600px;
+		
+		padding:0 40px;
+	}
+
+	.part2{
+		position: relative;
+		width: 100%;
+		padding: 80px 0;
+	}
+
+	.sessao2 img{
+		top: 16px;
+		margin-top: 20px;
+	}
+
+	footer{
+		text-align: center;
+		padding: 20px;
+	}
+
+	footer p{
+		float: none;
+		padding: 5px 0;
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 410px){
+	.sobre-autor{
+		max-width: 600px;
+		padding: 0 30px;
+	}
+
+	.titulo-autor .img-autor{
+		position: absolute;
+		float: none;
+		width: 40px;
+		height: 40px;
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 20px;
+	}
+
+	.texto-autor{
+		margin-top: 15px;
+	}
+}
