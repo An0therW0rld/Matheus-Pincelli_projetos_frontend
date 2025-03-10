@@ -244,18 +244,29 @@ section.sessao1 > .container{
 }
 
 .sobre-autor{
-	float: left;
+	position: relative;
 	max-width: 600px;
 	overflow: hidden;
 	padding: 0 30px;
 }
 
-#two.off, #tree.off, #one.off{
-	display: none;
+
+#two.off, #three.off, #one.off{
+	position: absolute;
+	left: 52px;
+	top: 0;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+#two, #one, #three{
+	left: 30px;
+	opacity: 1;
+	transition: all 0.3s ease-in
 }
 
 .titulo-autor{
-	float: left;
 	width: 100%;
 }
 
@@ -772,6 +783,10 @@ footer p:last-child{
 		border-radius: 20px;
 	}
 
+	.texto-autor{
+		margin-top: 15px;
+	}
+	
 	.texto-autor{
 		margin-top: 15px;
 	}
