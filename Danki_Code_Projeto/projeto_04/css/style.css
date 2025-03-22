@@ -1,0 +1,720 @@
+/* Resetando margens e definindo fonte padrão */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+}
+
+/* Garantindo altura total para HTML e body */
+html, body{
+	height: 100%;
+}
+
+/* Utilitário para limpar floats */
+.clear{
+	clear: both;
+}
+
+/* Centraliza elementos com largura máxima */
+.center{
+	max-width: 1340px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Estilos para o cabeçalho e menu */
+header .menu{
+	padding: 20px;
+	width: 100%;
+	height: 130px;
+}
+
+/* Estilos para os links do menu */
+header .menu_links{
+	float: right;
+}
+
+/* Menu móvel oculto por padrão */
+header .menu_mobile{
+	display: none;
+}
+
+/* Ícone do menu móvel */
+.menu_mobile .icon-menu{
+	background-image: url("../imagens/icon_menu.png");
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Estilização dos itens do menu */
+header .menu_links ul li{
+	float: left;
+	list-style-type: none;
+	padding: 30px 40px;
+	font-size: 22px;
+}
+
+header .menu_links ul li a{
+	text-decoration: none;
+	font-style: italic;
+	color: black;
+}
+
+/* Estilos do banner principal */
+section.banner{
+	width: 100%;
+	background-image: url("../imagens/bg.jpg");
+	background-color: black;
+	height: 70vh;
+	min-height: 500px;
+	background-position: right bottom;
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Informações dentro do banner */
+.info-banner{
+	padding: 40px;
+}
+
+/* Estilização dos itens da lista no banner */
+.info-banner ul li{
+	width: 350px;
+	height: 70px;
+	padding: 15px 0;
+	padding-left: 50px;
+	margin: 40px 0;
+	list-style-type: none;
+	font-size: 23px;
+	color: white;
+	font-style: italic;
+	background-position: left;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+section.banner ul li.red-background{
+	background-image: url(../imagens/box-text.png);
+}
+
+section.banner ul li.red-background:nth-of-type(2){
+	position: relative;
+	left: -10px;
+	width: 230px;
+}
+
+section.banner ul li.red-background:nth-of-type(3){
+	position: relative;
+	left: -20px;
+	width: 170px;
+}
+
+section.banner ul li.white-background{
+	position: relative;
+	left: -30px;
+	background-image: url(../imagens/box-white-text.png);
+	color: black;
+}
+
+/* Seções de vendas de veículos e formulário de contato */
+.vendas-veiculos, .form-contact{
+	padding: 80px 2%;
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Linhas estilizadas para títulos */
+.line-veiculos, .header-form{
+	display: flex;
+	position: relative;
+	align-items: center;
+	width: 100%;
+}
+
+.vendas-veiculos .line-veiculos > h2, .header-form > h2{
+	position: relative;
+	font-size: 27px;
+	margin: 0 auto;
+	padding: 0px 20px;
+	text-transform: uppercase;
+	font-style: italic;
+	background-color: white;
+}
+
+.vendas-veiculos .hr, .header-form .hr{
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+
+/* Informações dos veículos */
+.info-veiculos{
+	display: flex;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.info-veiculos-column{
+	width: 33.3%;
+	padding: 0px 15px;
+}
+
+.info-veiculos-column h2{
+	padding-top: 10px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+.info-veiculos-column p{
+	padding: 5px 0;
+	font-size: 15px;
+	font-style: italic;
+}
+
+/* Estilização dos botões */
+.info-veiculos-column button, .services button, .form-contact-elements button{
+	margin-top: 5px;
+	background-color: #EB2D2D;
+	width: 150px;
+	border: none;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 5px solid #B21E1E;
+	cursor: pointer;
+}
+
+/*Imagens dos carros a venda*/
+.carro-background-img{
+	background-image: url("../imagens/carro1.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 80%;
+	barder: 5px solid white;
+	cursor: pointer;
+}
+
+.carro2{
+	background-image: url("../imagens/vw_tl.jpg");
+}
+
+.carro3{
+	background-image: url("../imagens/vw_polo.jpg");
+}
+
+/* Seção de serviços e depoimentos */
+section.box-services-dep{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 120px;
+	padding-left: 2%;
+	padding-right: 2%;
+	color: white;
+	background: linear-gradient(to right,#242424 50%, #EB2D2D 50%);
+	font-style: italic;
+	width: 100%;
+
+}
+
+section .services{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	padding: 0 4%;
+}
+
+article.article-services{
+	padding: 0px 40px;
+	margin-left: 10%;
+}
+
+article.article-services h2{
+	padding-bottom: 20px;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+article.article-services ul{
+	float: left;
+	padding-left: 20px;
+	padding-right: 40px;
+	font-style: normal;
+}
+
+/*Estiliza individualmente os botões*/
+.services button{
+	float: left;	
+	position: relative;
+	transform: translateY(100%);
+}
+
+
+/*Bloco de depoimentos*/
+.testimony{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	padding: 0px 2%;
+}
+
+.blockquote-testimony{
+	width: 85%;
+	overflow: hidden;
+}
+
+
+/*Personaliza o slider*/
+.slider{
+	display: flex;
+	gap: 20px;
+	width: calc(100% * 3);
+}
+
+.slider .text{
+	width: calc(100% * (100 / 300));
+}
+
+.blockquote-testimony h2{
+	font-size: 30px;
+	font-weight: normal;
+	padding-bottom: 20px;
+}
+
+.blockquote-testimony p{
+	font-size: 22px;
+	font-style: normal;
+}
+
+.seta-img-left{
+	position: absolute;
+	left: 52%;
+	top: 40%;
+	transform: translate(-52%, -30%);
+	background-image: url("../imagens/arrow-left.png");
+	width: 20px;
+	height: 20px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.seta-img-right{
+	position: absolute;
+	left: 98%;
+	top: 40%;
+	transform: translate(-98%, -40%);
+	background-image: url("../imagens/arrow-right.png");
+	width: 20px;
+	height: 20px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.blockquote-testimony cite{
+	float: right;
+	position: relative;
+	right: 2px;
+	margin-top: 40px;
+	color: #252525;
+    font-size: 23px;
+}
+
+
+/*Seção de Contatos*/
+section.form-contact{
+	width: 100%;
+	padding-bottom: 160px;
+}
+
+form.contact{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form .form-contact-elements{
+	width: 650px;
+	padding-top: 60px;
+}
+
+form .form-contact-elements input, form textarea{
+	display: block;
+	margin-bottom: 30px;
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+form textarea{
+	padding-bottom: 10%;
+	resize: none;
+}
+
+form .form-contact-elements input[type="email"], 
+form .form-contact-elements input[type="tel"]{
+	float: left;
+	width: 50%;
+}
+
+form .form-contact-elements input[type="email"]{
+	width: calc(50% - 20px);
+	margin-right: 20px;
+}
+
+form .form-contact-elements > button{
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+
+/*rodapé*/
+section.footer .menu_links{
+	float: left;
+}
+
+section.footer aside{
+	float: right;
+	padding: 30px 40px;
+	color: white;
+	font-size: 20px;
+}
+
+.footer{
+	width: 100%;
+	background-color: #252525;
+}
+
+.footer .menu_links ul li{
+	float: left;
+	list-style-type: none;
+	padding: 30px 40px;
+	font-size: 18px;
+}
+
+.footer .menu_links ul li a{
+	text-decoration: none;
+	font-style: italic;
+	color: white;
+}
+
+/*Personaliza o overlay*/
+#overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	height: 100vh;
+	width: 100%;
+	opacity: 0;
+	background-color: rgba(50, 50, 50, 0.7);
+	z-index: 60;
+	transition: all 0.3s ease-in;
+}
+
+#overlay.apear{
+	pointer-events: all;
+	opacity: 1;
+}
+
+
+/*Designs responsivos.*/
+@media (max-width: 1024px){
+	section.banner{
+		background-position: left;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 785px){
+	/*Menu*/
+	header .menu_links, .footer .menu_links{
+		display: none;
+	}
+
+	header .menu_mobile{
+		display: initial;
+		float: right;
+	}
+
+	.menu_mobile .background-icon-menu{
+		position: absolute;
+		right: 0;
+		background-color: white;
+		border-radius: 10px;
+		width: 44px;
+		height: 44px;
+		margin: 30px 20px;
+		z-index: 100;
+		text-align: center;
+	}
+
+	.menu_mobile .icon-menu{
+		position: relative;
+		top: 6px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	header .menu_links_mobile{
+		width: 150px;
+		height: 100%;
+		position: fixed;
+		left: -150px;
+		top: 0;
+		z-index: 100;
+		background: linear-gradient(90deg, rgba(24,29,33,1) 10%, rgba(210,210,210,1) 80%);
+		transition: all 0.3s ease-in;
+	}
+
+	header .menu_links_mobile.apear{
+		left: 0;
+	}
+
+	header .menu_links_mobile ul li{
+		list-style-type: none;
+		padding: 30px 40px;
+		font-size: 22px;
+	}
+
+	header .menu_links_mobile ul li a{
+		text-decoration: none;
+		font-style: italic;
+		color: black;
+	}
+	/**/
+
+	/*Banner*/
+	section.banner{
+		height: 80vh;
+	}
+
+	.info-banner{
+		padding: 0;
+		padding-left: 35px;
+		padding-top: 40px;
+	}
+
+	.info-banner ul li{
+		width: 270px;
+		height: 50px;
+		margin: 0;
+		margin-bottom: 40px;
+		padding-left: 15px;
+		padding-top: 10px;
+	}
+
+	section.banner ul li.red-background:nth-of-type(2){
+		position: relative;
+		left: -10px;
+		width: 200px;
+	}
+
+	section.banner ul li.red-background:nth-of-type(3){
+		position: relative;
+		left: -20px;
+		width: 150px;
+	}
+	/**/
+
+	.vendas-veiculos .line-veiculos > h2{
+		font-size: 20px;
+		padding: 0 10px;
+	}
+
+	.info-veiculos{
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0px;
+	}
+
+	.info-veiculos-column{
+		width: 80%;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.carro-background-img{
+		padding-top: 80%;
+	}
+
+	section.box-services-dep{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: none;
+		padding: 0;
+	}
+
+	section .services{
+		width: 100%;
+		padding: 80px 2%;
+		background-color: #242424;
+	}
+
+	article.article-services{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	article.article-services h2{
+		position: relative;
+		transform: translateX(-88%);
+		padding: 0;
+		padding-bottom: 10px;
+	}
+
+	article.article-services ul{
+		float: none;
+		padding-left: 20px;
+		padding-right: 40px;
+		padding-bottom: 20px;
+		font-style: normal;
+	}
+
+	.services button{
+		float: none;	
+		position: relative;
+		transform: none;
+		transform: translateX(-30%)
+
+	}
+
+	.testimony{
+		width: 100%;
+		background-color: #EB2D2D;
+	}
+
+	.slider{
+		margin-top: 80px;
+	}
+
+	.seta-img-left{
+		position: absolute;
+		left: 2%;
+		top: 70%;
+		transform: translate(-2%, -70%);
+		background-image: url("../imagens/arrow-left.png");
+		width: 20px;
+		height: 20px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+
+	.seta-img-right{
+		position: absolute;
+		left: 98%;
+		top: 70%;
+		transform: translate(-98%, -70%);
+		background-image: url("../imagens/arrow-right.png");
+		width: 20px;
+		height: 20px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	section.form-contact{
+		width: 100%;
+	}
+
+	form.contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	form .form-contact-elements{
+		width: 95%;
+	}
+
+	form .form-contact-elements input, form textarea{
+		padding: 20px;
+	}
+
+	form .form-contact-elements input[type="email"], 
+	form .form-contact-elements input[type="tel"]{
+		float: none;
+		width: 100%;
+	}
+
+	form .form-contact-elements input[type="email"]{
+		margin-right: 0;
+	}
+
+	form button{
+		display: block;
+		margin: 0 auto;
+	}
+
+	section.footer aside{
+		float: none;
+		text-align: center;
+	}  
+}
+
+@media (max-width: 620px){
+	.seta-img-left{
+		position: absolute;
+		left: 45%;
+		top: 99%;
+		transform: translate(-45%, -99%);
+		background-image: url("../imagens/arrow-left.png");
+		width: 20px;
+		height: 20px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+
+	.seta-img-right{
+		position: absolute;
+		left: 55%;
+		top: 99%;
+		transform: translate(-55%, -99%);
+		background-image: url("../imagens/arrow-right.png");
+		width: 20px;
+		height: 20px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	.blockquote-testimony cite{
+		float: right;
+		position: relative;
+		right: 2px;
+		margin-top: 5px;
+		color: #252525;
+	    font-size: 23px;
+	}
+}

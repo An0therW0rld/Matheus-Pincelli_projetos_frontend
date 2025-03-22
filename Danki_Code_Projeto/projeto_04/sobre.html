@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sobre</title>
+
+		<link rel="stylesheet" type="text/css" href="css/stylesobre.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+		<meta name="description" content="Tela Inicial, layout, Projeto danki-code, Sobre.">
+
+		<meta name="keywords" content="HTML5, CSS3, javascript, design-responsivo">
+
+		<meta name="author" content="Matheus Pincelli Fenandes">
+	</head>
+
+	<body>
+		<header>
+			<div class="center">
+				<div class="menu">
+					<img src="imagens/logo.jpg">
+					<div class="menu_links">
+						<ul>
+							<li><a href="projeto_04.html">Home</a></li>
+							<li><a href="vendas.html">Venda</a></li>
+							<li><a href="sobre.html" style="color: #EB2D2D;">Sobre</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</div><!--menu-links-->
+
+					<div class="menu_mobile">
+						<div class="background-icon-menu">
+							<div class="icon-menu"></div>
+						</div><!--background-icon-menu-->
+						<div class="menu_links_mobile">					
+							<ul>
+								<li><a href="projeto_04.html">Home</a></li>
+								<li><a href="vendas.html">Venda</a></li>
+								<li><a href="sobre.html" style="color: #EB2D2D;">Sobre</a></li>
+								<li><a href="#">Contato</a></li>
+							</ul>
+						</div><!--menu_links_mobile-->
+					</div><!--menu-mobile-->
+					<div class="clear"></div>
+				</div><!--menu-->
+			</div><!--center-->
+		</header><!--header-->
+
+		<section class="sobre">
+			<div class="center">
+				<header class="title-sobre">
+					<div class="hr"></div>
+					<h2>SOBRE</h2>
+				</header>
+
+				<main>
+					<div class="flex-box-center">
+						<div class="sobre-box-img">
+							<div class="img-sobre"></div>
+						</div><!--sobre-box-img-->
+
+						<div class="text-sobre">
+							<h2>Lorem Ipsum</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac tincidunt lorem. Nulla condimentum et dolor et convallis. Mauris egestas ligula in pharetra venenatis. Etiam pharetra ipsum libero, vitae dignissim tortor imperdiet et. Aenean in tellus lorem ligula in pharetra venenatis. Etiam pharetra ipsum libero, vitae dignissim tortor imperdiet et. Aenean in tellus lorem ligula in pharetra venenatis. Etiam pharetra ipsum libero, vitae dignissim tortor imperdiet et. Aenean in tellus lorem.</p>
+						</div><!--text-sobre-->
+
+						<div class="description-img">
+							<div class="img-description"></div>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac tincidunt lorem. Nulla condimentum et dolor et convallis. Mauris egestas ligula in pharetra venenatis. Etiam pharetra ipsum libero. Nulla condimentum et dolor et convallis. Mauris egestas ligula in pharetra venenatis.</span>
+						</div><!--description-img-->
+					</div><!--flex-box-center-->
+				</main><!--main-->
+			</div><!--center-->
+		</section><!--sobre-->
+
+		<section class="footer">
+			<div class="center">
+				<div class="menu_links">
+					<ul>
+						<li><a href="projeto_04.html">Home</a></li>
+						<li><a href="vendas.html">Venda</a></li>
+						<li><a href="sobre.html" style="color: #EB2D2D;">Sobre</a></li>
+						<li><a href="#">Contato</a></li>
+					</ul>
+				</div><!--menu-links-->
+				<aside>Todos os direitos reservados</aside>
+				<div class="clear"></div>
+			</div><!--center-->
+		</section><!--footer-->
+
+		<div id="overlay"></div>
+
+		<script type="text/javascript">
+			// Seleciona os elementos do menu lateral e o botão que ativa o menu
+			const side_bar = document.querySelector(".menu_links_mobile");
+			const icon_menu = document.querySelector(".icon-menu");
+			const overlay = document.getElementById("overlay");
+
+			// Define um media query para detectar quando a tela tem 786px ou mais
+			const media_query = window.matchMedia("(min-width: 786px)");
+
+			// Função para garantir que o menu seja fechado ao mudar para telas maiores
+			function handleResponsiveDesign(){
+				if (media_query.matches){ // Se a largura da tela for maior ou igual a 786px
+					side_bar.classList.remove("apear"); // Esconde o menu lateral
+					overlay.classList.remove("apear"); // Esconde o overlay de fundo
+				}
+			}
+
+			// Adiciona um evento ao clique no ícone do menu para abrir/fechar o menu lateral
+			icon_menu.addEventListener("click", function(){
+				side_bar.classList.toggle("apear"); // Alterna a visibilidade do menu
+				overlay.classList.toggle("apear"); // Alterna a visibilidade do overlay
+			});
+
+			// Adiciona um evento ao clique no overlay para fechar o menu ao clicar fora dele
+			overlay.addEventListener("click", function(){
+				side_bar.classList.toggle("apear");
+				overlay.classList.toggle("apear");
+			});
+
+			// Monitora mudanças no tamanho da tela para ajustar a visibilidade do menu automaticamente
+			media_query.addEventListener("change", handleResponsiveDesign);
+		</script>
+	</body>
+</html>

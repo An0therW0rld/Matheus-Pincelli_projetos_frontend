@@ -1,0 +1,526 @@
+/* Resetando margens, preenchimentos e definindo a fonte padrão */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+}
+
+/* Definindo altura total para html e body */
+html, body{
+	height: 100%;
+}
+
+/* Classe utilitária para limpar floats */
+.clear{
+	clear: both;
+}
+
+/* Centralizando conteúdo */
+.center{
+	max-width: 1480px;
+	width: 100%;
+	padding: 0 2%;
+	margin: 0 auto;
+}
+
+/* Estilização do cabeçalho */
+body > header{
+	border-bottom: 2px solid red;
+}
+
+/* Definição do menu */
+header .menu{
+	padding-top: 20px;
+	width: 100%;
+	height: 130px;
+}
+
+/* Estilização dos links do menu */
+header .menu_links{
+	float: right;
+}
+
+/* Menu móvel inicialmente oculto */
+header .menu_mobile{
+	display: none;
+}
+
+/* Ícone do menu móvel */
+.menu_mobile .icon-menu{
+	background-image: url("../imagens/icon_menu.png");
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Estilização dos itens do menu */
+header .menu_links ul li{
+	float: left;
+	list-style-type: none;
+	padding: 30px;
+	font-size: 22px;
+}
+
+/* Estilização dos links do menu */
+header .menu_links ul li a{
+	text-decoration: none;
+	font-style: italic;
+	color: black;
+}
+
+/* Estilização do título da galeria */
+header.title-galery{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 0;
+}
+
+/* Definição do layout da galeria de veículos */
+.galery-veiculos > .center{
+	padding: 40px 0;
+	max-width: 1000px;
+}
+
+/* Seção de informações dos veículos */
+.info-veiculos{
+	width: 60%;
+	float: left;
+}
+
+/* Estilização do menu de informações dos veículos */
+.info-veiculos header.menu-info-veiculos{
+	padding-left: 28px;
+	padding-bottom: 20px;
+	padding-right: 2%;
+}
+
+/* Estilização dos itens do menu de informações dos veículos */
+header.menu-info-veiculos li{
+	list-style: none;
+	float: left;
+	margin-right: 30px;
+}
+
+/* Remove a margem direita do último item */
+header.menu-info-veiculos li:last-of-type{
+	margin-right: 0;
+}
+
+/* Links do menu de informações dos veículos */
+header.menu-info-veiculos li a{
+	text-transform: uppercase;
+	color: black;
+	text-decoration: none;
+}
+
+/* Definição da imagem principal do carro */
+.main-imagem .img-car{
+	background-image: url("../imagens/carro1.jpg");
+	background-position: center;
+	background-size: 95% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 70%;
+}
+
+/* Container da navegação da galeria */
+.nav-galery{
+	overflow: hidden;
+	width: 100%;
+}
+
+/* Container das imagens da galeria */
+.galery-wraper{
+	width: 200%;
+}
+
+/* Estilização das imagens da galeria */
+.galery-wraper > .img-car{
+	float: left;
+	background-image: url("../imagens/carro1.jpg");
+	background-position: center;
+	border: 9px solid white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: calc(33.3% * (100 / 200));
+	padding-top: calc(33.3% * (100 / 200) * 0.6);
+}
+
+/* Definição das imagens da galeria com nth-of-type */
+.galery-wraper > .img-car:nth-of-type(2){
+	background-image: url("../imagens/carro1_img2.jpg");
+}
+
+.galery-wraper > .img-car:nth-of-type(3){
+	background-image: url("../imagens/carro1_img3.jpg");
+}
+
+.galery-wraper > .img-car:nth-of-type(4){
+	background-image: url("../imagens/carro1_img4.jpg");
+}
+
+.galery-wraper > .img-car:nth-of-type(5){
+	background-image: url("../imagens/carro1_img5.jpg");
+}
+
+.galery-wraper > .img-car:nth-of-type(6){
+	background-image: url("../imagens/carro1_img6.jpg");
+}
+
+/* Setas do slider */
+.slider-arrows{
+	position: relative;
+	padding: 36px;
+}
+
+/* Seta esquerda */
+.arrow-left{
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url("../imagens/arrow-left.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+/* Seta direita */
+.arrow-right{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url("../imagens/arrow-right.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+/* Descrição dos veículos */
+.description-veiculos{
+	width: 40%;
+	padding-top: 40px;
+	float: left;
+}
+
+/* Título da descrição */
+.description-veiculos h2{
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+
+/* Texto da descrição */
+.description-veiculos p{
+	padding-bottom: 20px;
+}
+
+/* Botão padrão */
+button{
+	margin-top: 5px;
+	background-color: #EB2D2D;
+	width: 150px;
+	border: none;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 5px solid #B21E1E;
+	cursor: pointer;
+}
+
+/* Títulos das seções */
+header.title-contato, header.title-veiculos{
+	padding-top: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Linhas horizontais nos títulos */
+header.title-contato .hr, header.title-veiculos .hr, header.title-galery .hr{
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+
+/* Estilização dos títulos */
+header.title-contato h2, header.title-veiculos h2, header.title-galery h2{
+	position: absolute;
+	padding: 20px;
+	font-size: 27px;
+	font-style: italic;
+	background-color: white;
+}
+
+/* Formulário de contato */
+form.form-contato{
+	padding-top: 40px;
+	padding-bottom: 100px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+/* Inputs do formulário */
+form.form-contato input{
+	width: 100%;
+	padding: 7px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+/* Inputs de e-mail e telefone */
+form.form-contato input[type="email"]{
+	margin-right: 10px;
+	width: calc(50% - 10px);
+}
+
+form.form-contato input[type="tel"]{
+	width: 50%;
+}
+
+/* Botão do formulário */
+form.form-contato button{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+/* Textarea do formulário */
+form.form-contato textarea{
+	width: 100%;
+	padding: 7px;
+	padding-bottom: 20%;
+	resize: none;
+}
+
+/* Seção do rodapé */
+.footer{
+	margin-top: 120px;
+	width: 100%;
+	background-color: #252525;
+}
+
+/* Itens do menu do rodapé */
+.footer .menu_links ul li{
+	float: left;
+	list-style-type: none;
+	padding: 30px 40px;
+	font-size: 18px;
+}
+
+/* Links do menu do rodapé */
+.footer .menu_links ul li a{
+	text-decoration: none;
+	font-style: italic;
+	color: white;
+}
+
+/* Overlay para efeitos visuais */
+#overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	height: 100vh;
+	width: 100%;
+	opacity: 0;
+	background-color: rgba(50, 50, 50, 0.7);
+	z-index: 60;
+	transition: all 0.3s ease-in;
+}
+
+/* Exibição do overlay */
+#overlay.apear{
+	pointer-events: all;
+	opacity: 1;
+}
+
+
+/*Designs Responsivos*/
+@media (max-width: 850px){
+	.footer .menu_links{
+		display: none;
+	}
+
+	section.footer aside{
+		float: none;
+		text-align: center;
+		padding: 30px 40px;
+		color: white;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 785px){
+	/*Menu*/
+	header .menu_links{
+		display: none;
+	}
+
+	header .menu_mobile{
+		display: initial;
+		float: right;
+	}
+
+	.menu_mobile .background-icon-menu{
+		position: absolute;
+		right: 0;
+		background-color: white;
+		border-radius: 10px;
+		width: 44px;
+		height: 44px;
+		margin: 30px 20px;
+		z-index: 100;
+		text-align: center;
+	}
+
+	.menu_mobile .icon-menu{
+		position: relative;
+		top: 6px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	header .menu_links_mobile{
+		width: 150px;
+		height: 100%;
+		position: fixed;
+		left: -150px;
+		top: 0;
+		z-index: 100;
+		background: linear-gradient(90deg, rgba(24,29,33,1) 10%, rgba(210,210,210,1) 80%);
+		transition: all 0.3s ease-in;
+	}
+
+	header .menu_links_mobile.apear{
+		left: 0;
+	}
+
+	header .menu_links_mobile ul li{
+		list-style-type: none;
+		padding: 30px 40px;
+		font-size: 22px;
+	}
+
+	header .menu_links_mobile ul li a{
+		text-decoration: none;
+		font-style: italic;
+		color: black;
+	}
+	/**/
+
+	.info-veiculos{
+		width: 100%;
+		float: none;
+	}
+
+	.main-imagem{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.main-imagem .img-car{
+		background-size: 100% 100%;
+		width: 100%;
+		padding-top: 70%;
+	}
+
+	.galery-wraper{
+		margin-top: 0;
+	}
+
+	.galery-wraper > .img-car{
+		float: left;
+		background-image: url("../imagens/carro1.jpg");
+		background-position: center;
+		border: 7px solid white;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: calc(33.3% * (100 / 200));
+		padding-top: calc(33.3% * (100 / 200) * 0.6);
+	}
+
+	.description-veiculos{
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	.description-veiculos h2{
+		font-size: 24px;
+		padding-bottom: 10px;
+	}
+
+	.description-veiculos p{
+		padding-bottom: 10px;
+		line-height: 27px;
+	}
+
+	header.title-contato{
+		padding-bottom: 20px;
+	}
+
+
+	form.form-contato{
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	form.form-contato input{
+		width: 100%;
+		padding: 4%;
+		margin: 0;
+		margin-bottom: 20px;
+		float: left;
+	}
+
+	form.form-contato input[type="email"]{
+		width: 100%;
+	}
+
+	form.form-contato input[type="tel"]{
+		width: 100%;
+	}
+
+	form.form-contato textarea{
+		padding: 4%;
+		padding-bottom: 20%;
+	}
+
+	section.veiculos-destaque .line-veiculos{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 40px 10px;
+		width: 100%;
+	}
+
+	section.veiculos-destaque .cel-veiculos{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+
+	section.veiculos-destaque .cel-veiculos .img-car{
+		width: 80%;
+		padding-top: 60%;
+		border: none;
+		background-image: url("../imagens/carro1.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}

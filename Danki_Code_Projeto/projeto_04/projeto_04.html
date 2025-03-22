@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Veículos</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+		<meta name="description" content="Tela Inicial, layout, interatividade, Projeto danki-code.">
+
+		<meta name="keywords" content="HTML5, CSS3, javascript, design-responsivo">
+
+		<meta name="author" content="Matheus Pincelli Fenandes">
+	</head>
+	
+	<body>
+		<header>
+			<div class="center">
+				<div class="menu">
+					<img src="imagens/logo.jpg">
+					<div class="menu_links">
+						<ul>
+							<li><a href="projeto_04.html" style="color: #EB2D2D;">Home</a></li>
+							<li><a href="vendas.html">Venda</a></li>
+							<li><a href="sobre.html">Sobre</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</div><!--menu_links-->
+
+					<div class="menu_mobile">
+						<div class="background-icon-menu">
+							<div class="icon-menu"></div>
+						</div><!--background-icon-menu-->
+						<div class="menu_links_mobile">					
+							<ul>
+								<li><a href="projeto_04.html" style="color: #EB2D2D;">Home</a></li>
+								<li><a href="vendas.html">Venda</a></li>
+								<li><a href="sobre.html">Sobre</a></li>
+								<li><a href="#">Contato</a></li>
+							</ul>
+						</div><!--menu_links_mobile-->
+					</div><!--menu-mobile-->
+					<div class="clear"></div>
+				</div><!--menu-->
+			</div><!--center-->
+		</header><!--header-->
+
+		<section class="banner">
+			<div class="center">
+				<div class="info-banner">
+					<ul>
+						<li class="red-background">CONSULTORIA</li>
+						<li class="red-background">COMPRA</li>
+						<li class="red-background">VENDA</li>
+						<li class="white-background">E-MAIL@HOTMAIL.COM</li>
+					</ul>
+				</div><!--info-banner-->
+			</div><!--center-->
+		</section><!--banner-->
+
+		<section class="vendas-veiculos">
+			<div class="line-veiculos">
+				<div class="hr"></div>
+				<h2>Veículos em Destaque</h2>
+			</div><!--line-veiculos-->
+
+			<div class="info-veiculos">
+				<div class="info-veiculos-column">
+					<div class="carro-background-img" onclick="window.location.href='vendas-single.html'"></div>
+					<h2>Volkswagen Karmann-ghia</h2>
+					<p>1.6 8v, Gasolina, 2P, Manual1969</p>
+					<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+				</div><!--info-veiculos-column-->
+
+				<div class="info-veiculos-column">
+					<div class="carro-background-img carro2" onclick="window.location.href='vendas-single.html'"></div>
+					<h2>Volkswagen TL</h2>
+					<p>1.6 8v, Gasolina, 2P, Manual1970</p>
+					<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+				</div><!--info-veiculos-column-->
+
+				<div class="info-veiculos-column">
+					<div class="carro-background-img carro3" onclick="window.location.href='vendas-single.html'"></div>
+					<h2>Volkswagen Polo Classic</h2>
+					<p>1.6 8v, Gasolina, 2P, Manual2005</p>
+					<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+				</div><!--info-veiculos-column-->
+			</div><!--info-veiculos-->
+		</section><!--vendas-veiculos-->
+
+		<section class="box-services-dep">
+			<div class="services">
+				<article class="article-services">
+					<h2>Serviços</h2>
+					<ul>
+						<li>Compra</li>
+						<li>Venda</li>
+						<li>Consultoria de veículos</li>
+						<li>Indicação de Mecânicos e peças</li>
+					</ul>
+					<button onclick="window.location.href='#'">Saiba Mais</button>
+					<div class="clear"></div>
+				</article><!--article-services-->
+			</div><!--services-->
+
+			<div class="testimony">
+				<blockquote class="blockquote-testimony">
+					<div class="slider" id="slider">
+						<div class="text">
+							<h2>Depoimentos</h2>
+							<p>"O Rafael foi muito atencioso, me buscou no aeroporto e garantiu toda comodidade e conforto no almoço, no transfer, na visita ao veículo e durante o test-drive."</p>
+							<cite>João da Silva</cite>
+						</div><!--text-->
+						<div class="clear"></div>
+
+						<div class="text">
+							<h2>Depoimentos</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue nunc neque. Nam et lorem felis. In hac habitasse platea dictumst. Maecenas venenatis leo at faucibus mollis. Suspendisse hendrerit odio at mauris euismod egestas."</p>
+							<cite>Matheus</cite>
+						</div><!--text-->
+						<div class="clear"></div>
+
+						<div class="text">
+							<h2>Depoimentos</h2>
+							<p>"Quisque risus tellus, aliquet maximus rhoncus in, ultrices accumsan metus. Praesent viverra rutrum risus. Donec tempor non turpis finibus consequat. Nunc rhoncus feugiat velit eu placerat. Aenean at purus egestas arcu maximus aliquet. Mauris in ipsum elementum, imperdiet est mattis, volutpat erat. Vestibulum ac risus et est laoreet tristique. Nulla facilisi. Morbi nibh sem, rutrum vel fringilla id, finibus vel nulla. Suspendisse at dapibus ipsum."</p>
+							<cite>Thiago</cite>
+						</div><!--text-->
+						<div class="clear"></div>
+					</div><!--slider-->
+				</blockquote><!--blockquote-testimony-->
+				<span class="seta-img-left"></span>
+				<span class="seta-img-right"></span>
+				<div class="clear"></div>
+			</div><!--testimony-->
+		</section><!--box-services-dep-->
+
+		<section class="form-contact">
+			<form class="contact">
+				<header class="header-form">
+					<div class="hr"></div>
+					<h2>Contato</h2>
+				</header><!--header-form-->
+				
+				<div class="form-contact-elements">
+					<input type="text" name="nome" placeholder="Nome*" required>
+					<input type="email" name="email" placeholder="E-mail*" required>
+					<input type="tel" name="telefone" placeholder="Telefone*" required>
+					<div class="clear"></div>
+					<textarea placeholder="Mensagem*" required></textarea>
+					<button onclick="window.location.href='#'">Enviar</button>
+				</div><!--form-contact-elements-->
+			</form><!--contact-->
+		</section><!--form-contact-->
+
+		<section class="footer">
+			<div class="center">
+				<div class="menu_links">
+					<ul>
+						<li><a href="projeto_04.html" style="color: #EB2D2D;">Home</a></li>
+						<li><a href="vendas.html">Venda</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="#">Contato</a></li>
+					</ul>
+				</div><!--menu_links-->
+				<aside>Todos os direitos reservados</aside>
+				<div class="clear"></div>
+			</div><!--center-->
+		</section><!--footer-->
+
+		<div id="overlay"></div>
+
+		<script type="text/javascript">
+			
+			// Seleciona os elementos do menu e o botão de ativação
+			const side_bar = document.querySelector(".menu_links_mobile");
+			const icon_menu = document.querySelector(".icon-menu");
+			const overlay = document.getElementById("overlay");
+
+			// Configuração para detectar largura da tela (usado no design responsivo)
+			const media_query = window.matchMedia("(min-width: 786px)");
+
+			// Seleciona os elementos do slider e as setas de navegação
+			let arrows = document.querySelector(".setas");
+			let arrow_left = document.querySelector(".seta-img-left");
+			let arrow_right = document.querySelector(".seta-img-right");
+			const slider = document.getElementById("slider");
+			const text_slides = document.querySelectorAll(".text");
+			let count = 0;// Controla a posição do slide atual
+
+			// Função para avançar os slides
+			function forward(){
+				if (count < text_slides.length - 1){ // Verifica se ainda há slides à frente
+					count++;
+					slider.style.transform = `translateX(-${(count * 100) / text_slides.length}%)`;
+					slider.style.transition = 'transform 1s ease-in'  // Adiciona um efeito de transição suave
+				}
+			}
+
+			// Função para voltar os slides
+			function back(){
+				if (count > 0){ // Verifica se ainda há slides anteriores
+					count--;
+					slider.style.transform = `translateX(-${(count * 100) / text_slides.length}%)`;
+					slider.style.transition = 'transform 1s ease-in' 
+				}
+			}
+
+			// Função para lidar com o design responsivo
+			function handleResponsiveDesign(){
+				if (media_query.matches){ // Se a largura da tela for maior que 786px
+					side_bar.classList.remove("apear"); // Esconde o menu lateral
+					overlay.classList.remove("apear"); // Esconde o fundo escurecido
+				}
+			}
+
+			// Adiciona evento de clique no ícone do menu para abrir/fechar o menu lateral
+			icon_menu.addEventListener("click", function(){
+				side_bar.classList.toggle("apear");  // Alterna a classe para exibir/esconder o menu
+				overlay.classList.toggle("apear"); // Alterna a exibição do overlay
+			});
+
+			// Adiciona evento de clique no overlay para fechar o menu quando clicar fora dele
+			overlay.addEventListener("click", function(){
+				side_bar.classList.toggle("apear");
+				overlay.classList.toggle("apear");
+			});
+
+			// Adiciona eventos de clique para as setas de navegação do slider
+			arrow_right.addEventListener("click", forward);
+			arrow_left.addEventListener("click", back)
+			
+			// Adiciona evento para ajustar o design quando a largura da tela mudar
+			media_query.addEventListener("change", handleResponsiveDesign);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Vendas</title>
+
+		<!-- Importação do arquivo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/stylevendas.css">
+		
+		<!-- Fonte externa do Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+		<!-- Metadados para SEO -->
+		<meta name="description" content="Tela Inicial, layout, Projeto danki-code, Opalas.">
+		<meta name="keywords" content="HTML5, CSS3, javascript, design-responsivo">
+		<meta name="author" content="Matheus Pincelli Fernandes">
+	</head>
+	
+	<body>
+		<!-- Cabeçalho da página -->
+		<header>
+			<div class="center">
+				<div class="menu">
+					<!-- Logo -->
+					<img src="imagens/logo.jpg">
+					
+					<!-- Menu de navegação para desktop -->
+					<div class="menu_links">
+						<ul>
+							<li><a href="projeto_04.html">Home</a></li>
+							<li><a href="vendas.html" style="color: #EB2D2D;">Venda</a></li>
+							<li><a href="sobre.html">Sobre</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</div>
+
+					<!-- Menu de navegação para mobile -->
+					<div class="menu_mobile">
+						<div class="background-icon-menu">
+							<div class="icon-menu"></div>
+						</div>
+						<div class="menu_links_mobile">					
+							<ul>
+								<li><a href="projeto_04.html">Home</a></li>
+								<li><a href="vendas.html" style="color: #EB2D2D;">Venda</a></li>
+								<li><a href="sobre.html">Sobre</a></li>
+								<li><a href="#">Contato</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Seção principal de vendas -->
+		<section class="vendas">
+			<div class="center">
+				<header class="title-vendas">
+					<div class="hr"></div>
+					<h2>Venda</h2>
+				</header>
+
+				<div class="flex-box">
+					<!-- Filtros para busca de veículos -->
+					<div class="filter">
+						<h2>Filtre por preço</h2>
+						<div class="filter-range">
+							<div class="trilha"></div>
+							<div class="pointer"></div>
+						</div>
+						<div class="min-and-max">
+							<span class="min">R$0,00</span>
+							<span class="max">70.000,00</span>
+							<div class="clear"></div>
+						</div>
+
+						<!-- Filtro por ano -->
+						<div class="filter-radio">
+							<h2>Filtre por ano</h2>
+							<div class="filter-items">
+								<input type="radio" id="item1" name="decadas">
+								<label class="item1" for="item1">
+									<div class="circle"></div>
+								</label>
+								<span>Todas as décadas</span>
+							</div>
+							
+							<div class="filter-items">
+								<input type="radio" id="item2" name="decadas">
+								<label class="item2" for="item2">
+									<div class="circle"></div>
+								</label>
+								<span>1960 - 1970</span>
+							</div>
+
+							<div class="filter-items">
+								<input type="radio" id="item3" name="decadas">
+								<label class="item3" for="item3">
+									<div class="circle"></div>
+								</label>
+								<span>1971 - 1990</span>
+							</div>
+
+							<div class="filter-items">
+								<input type="radio" id="item4" name="decadas">
+								<label class="item4" for="item4">
+									<div class="circle"></div>
+								</label>
+								<span>1991 - 2000</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Seção onde são exibidos os veículos à venda -->
+					<div class="cars-sell">
+						<div class="line-veiculos">
+							<div class="cel-veiculos">
+								<div class="img-car" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen Karmann-ghia</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1969</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+
+							<!-- Adicionando mais veículos -->
+							<div class="cel-veiculos">
+								<div class="img-car" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen TL</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1970</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+
+							<div class="cel-veiculos">
+								<div class="img-car" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen Passat</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1973</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</section>
+
+		<!-- Rodapé -->
+		<section class="footer">
+			<div class="center">
+				<div class="menu_links">
+					<ul>
+						<li><a href="projeto_04.html">Home</a></li>
+						<li><a href="vendas.html" style="color: #EB2D2D;">Venda</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="#">Contato</a></li>
+					</ul>
+				</div>
+				<aside>Todos os direitos reservados</aside>
+				<div class="clear"></div>
+			</div>
+		</section>
+
+		<!-- Overlay usado para menu mobile -->
+		<div id="overlay"></div>
+
+		<!-- Script JavaScript -->
+		<script type="text/javascript">
+			// Seleciona elementos do menu e do overlay
+			const side_bar = document.querySelector(".menu_links_mobile");
+			const icon_menu = document.querySelector(".icon-menu");
+			const overlay = document.getElementById("overlay");
+			const media_query = window.matchMedia("(min-width: 786px)");
+
+			// Função para lidar com mudanças no design responsivo
+			function handleResponsiveDesign(){
+				if (media_query.matches){
+					side_bar.classList.remove("apear");
+					overlay.classList.remove("apear");
+				}
+			}
+
+			// Eventos de clique para abrir/fechar o menu mobile
+			icon_menu.addEventListener("click", function(){
+				side_bar.classList.toggle("apear");
+				overlay.classList.toggle("apear");
+			});
+
+			overlay.addEventListener("click", function(){
+				side_bar.classList.toggle("apear");
+				overlay.classList.toggle("apear");
+			});
+
+			// Evento para monitorar mudanças no tamanho da tela
+			media_query.addEventListener("change", handleResponsiveDesign);
+		</script>
+
+	</body>
+</html>

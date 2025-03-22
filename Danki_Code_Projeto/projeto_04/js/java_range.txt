@@ -1,0 +1,38 @@
+			const pointer = document.querySelector(".pointer");
+			const track = document.querySelector(".trilha");
+			const rangeBar = document.querySelector(".filter-range");
+
+			let isDragging = false;
+
+			pointer.addEventListener("mousedown", () => {
+			    isDragging = true;
+			    document.addEventListener("mousemove", movePointer);
+			    document.addEventListener("mouseup", () => {
+			        isDragging = false;
+			        document.removeEventListener("mousemove", movePointer);
+			    });
+			});
+
+			function movePointer(event) {
+			    if (!isDragging) return;
+
+			    const barRect = rangeBar.getBoundingClientRect();
+			    const pointerWidth = pointer.offsetWidth; // Largura do ponteiro
+
+			    let newX = event.clientX - barRect.left;
+
+			    // Ajustar os limites levando em conta a metade do ponteiro
+			    let minX = pointerWidth / 2;
+			    let maxX = barRect.width - pointerWidth / 2;
+
+			    // Garantir que o ponteiro fique dentro dos limites
+			    if (newX < minX) newX = minX;
+			    if (newX > maxX) newX = maxX;
+
+			    // Convertendo para porcentagem correta
+			    let percentage = ((newX - minX) / (maxX - minX)) * 100;
+
+			    // Atualizando a trilha e a posição do ponteiro
+			    track.style.width = `${percentage}%`;
+			    pointer.style.left = `calc(${percentage}% - ${pointerWidth / 2}px)`;
+			}
