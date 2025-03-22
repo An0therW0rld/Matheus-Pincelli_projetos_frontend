@@ -1,3 +1,3 @@
 # projetos_Frontend
-Olá! Estou cursando Ciência da Computação e estou subindo alguns projetos para o github. Criar meu portfólio. Esses projetos que estou colocando são criados com HTML e CSS, mas alguns possuem JavaScript e um pouquinho de php.
-OBS: O facebook 2024 utiliza php é necessário configurar o apache para que funcione. Ou mudar a extensão do arquivo HTML para php.
+Olá! Estou cursando Ciência da Computação e estou subindo alguns projetos para o github. Criar meu portfólio. Esses projetos que estou colocando são criados com HTML e CSS, mas alguns possuem JavaScript e um pouquinho de php. Recentemente adicionei o projeto 04. Acredito que seja o meu melhor até agora.
+OBS: O facebook 2024 utiliza php é necessário configurar o apache para que funcione. Ou mudar a extensão do arquivo HTML para php. Os projetos ainda não estão 100% finalizados, ainda precisam de ajustes. Ainda não refatorei meus scrips feitos em JavaScript, e estão todos em arquivos html, ainda não os coloquei em pastas separadas.
