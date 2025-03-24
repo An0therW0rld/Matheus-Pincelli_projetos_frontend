@@ -223,6 +223,75 @@ header.menu-info-veiculos li a{
 	padding-bottom: 20px;
 }
 
+.flex-box{
+	display: flex;
+}
+
+.veiculos-img-destaque{
+	padding-top: 40px;
+}
+
+.cars-sell{
+	width: 75%;
+	padding-top: 60px;
+	padding-left: 20px;
+}
+
+.line-veiculos{
+	display: flex;
+	width: 100%;
+}
+
+.cel-veiculos{
+	width: 100%;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+.cel-veiculos h2{
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.cel-veiculos p{
+	padding-bottom: 5px;
+}
+
+.img-car{
+	background-image: url("../imagens/carro1.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 100%;
+	cursor: pointer;
+}
+
+.line-veiculos:nth-of-type(1) .cel-veiculos:nth-of-type(2) > .img-car{
+	background-image: url("../imagens/vw_tl.jpg");
+}
+
+.line-veiculos:nth-of-type(1) .cel-veiculos:nth-of-type(2) > .img-car{
+	background-image: url("../imagens/vw_tl.jpg");
+}
+
+.line-veiculos:nth-of-type(1) .cel-veiculos:nth-of-type(3) > .img-car{
+	background-image: url("../imagens/vw_passat.jpg");
+}
+
+.line-veiculos:nth-of-type(2) .cel-veiculos:nth-of-type(1) > .img-car{
+	background-image: url("../imagens/vw_by.jpg");
+}
+
+.line-veiculos:nth-of-type(2) .cel-veiculos:nth-of-type(2) > .img-car{
+	background-image: url("../imagens/vw_golf.jpg");
+}
+
+.line-veiculos:nth-of-type(2) .cel-veiculos:nth-of-type(3) > .img-car{
+	background-image: url("../imagens/vw_polo.jpg");
+}
+
+
 /* Botão padrão */
 button{
 	margin-top: 5px;
@@ -309,6 +378,18 @@ form.form-contato textarea{
 	margin-top: 120px;
 	width: 100%;
 	background-color: #252525;
+}
+
+/*rodapé*/
+section.footer .menu_links{
+	float: left;
+}
+
+section.footer aside{
+	float: right;
+	padding: 30px 40px;
+	color: white;
+	font-size: 20px;
 }
 
 /* Itens do menu do rodapé */
