@@ -258,36 +258,36 @@
 			let isDragging = false;
 
 			pointer.addEventListener("mousedown", () => {
-    			isDragging = true;
+    				isDragging = true;
 			});
 
 			document.addEventListener("mouseup", () => {
-    			isDragging = false;
+    				isDragging = false;
 			});
 
 			document.addEventListener("mousemove", (event) => {
-    			if (!isDragging) return;
+    				if (!isDragging) return;
 
-    			const barRect = rangeBar.getBoundingClientRect();
-    			const barWidth = barRect.width;
-    			const pointerWidth = pointer.offsetWidth;
-    			const max = barWidth - pointerWidth / 2;
+    				const barRect = rangeBar.getBoundingClientRect();
+    				const barWidth = barRect.width;
+    				const pointerWidth = pointer.offsetWidth;
+    				const max = barWidth - pointerWidth / 2;
 
-    			// Posição relativa dentro da barra
-    			let newX = event.clientX - barRect.left;
+    				// Posição relativa dentro da barra
+    				let newX = event.clientX - barRect.left;
 
-    			// Limitando aos extremos da barra
-    			if (newX < 0) newX = 0;
+    				// Limitando aos extremos da barra
+    				if (newX < 0) newX = 0;
    		 		if (newX > max) newX = max;
 
-    			// Convertendo para percentual
-    			let percentage = (newX / barWidth) * 100;
+    				// Convertendo para percentual
+    				let percentage = (newX / barWidth) * 100;
 
-    			filter_price(percentage);
+    				filter_price(percentage);
 
-    			// Atualizando os estilos
-    			track.style.width = `${percentage}%`;
-    			pointer.style.left = `${percentage}%`;
+    				// Atualizando os estilos
+    				track.style.width = `${percentage}%`;
+    				pointer.style.left = `${percentage}%`;
 			});
 		</script>
 	</body>
