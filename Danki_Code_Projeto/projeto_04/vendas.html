@@ -226,6 +226,7 @@
 			const rangeBar = document.querySelector(".filter-range");
 			const lista_img = document.querySelectorAll(".img-car");
 			const cel_veiculos = document.querySelectorAll(".cel-veiculos");
+			let isDragging = false;
 
 			function filter_price(percentage){
 				if (percentage >= 28.57 && percentage < 42.85){
@@ -254,8 +255,6 @@
 					}
 				}	
 			}
-
-			let isDragging = false;
 
 			pointer.addEventListener("mousedown", () => {
     				isDragging = true;
