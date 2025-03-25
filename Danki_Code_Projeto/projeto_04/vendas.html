@@ -118,7 +118,7 @@
 					<div class="cars-sell">
 						<div class="line-veiculos">
 							<div class="cel-veiculos">
-								<div class="img-car" onclick="window.location.href='vendas-single.html'"></div>
+								<div class="img-car vinte-mil" onclick="window.location.href='vendas-single.html'"></div>
 								<h2>Volkswagen Karmann-ghia</h2>
 								<p>1.6 8v, Gasolina, 2P, Manual, 1969</p>
 								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
@@ -126,7 +126,31 @@
 
 							<!-- Adicionando mais veículos -->
 							<div class="cel-veiculos">
-								<div class="img-car" onclick="window.location.href='vendas-single.html'"></div>
+								<div class="img-car vinte-mil" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen TL</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1970</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+
+							<div class="cel-veiculos">
+								<div class="img-car vinte-mil" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen Passat</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1973</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+						</div>
+
+						<div class="line-veiculos">
+							<div class="cel-veiculos">
+								<div class="img-car trinta-mil" onclick="window.location.href='vendas-single.html'"></div>
+								<h2>Volkswagen Karmann-ghia</h2>
+								<p>1.6 8v, Gasolina, 2P, Manual, 1969</p>
+								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
+							</div>
+
+							<!-- Adicionando mais veículos -->
+							<div class="cel-veiculos">
+								<div class="img-car trinta-mil" onclick="window.location.href='vendas-single.html'"></div>
 								<h2>Volkswagen TL</h2>
 								<p>1.6 8v, Gasolina, 2P, Manual, 1970</p>
 								<button onclick="window.location.href='vendas-single.html'">Mais Detalhes</button>
@@ -194,6 +218,81 @@
 			// Evento para monitorar mudanças no tamanho da tela
 			media_query.addEventListener("change", handleResponsiveDesign);
 		</script>
+
+		<!--filter range estiliza-->
+		<script type="text/javascript">
+			const pointer = document.querySelector(".pointer");
+			const track = document.querySelector(".trilha");
+			const rangeBar = document.querySelector(".filter-range");
+			const lista_img = document.querySelectorAll(".img-car");
+			const cel_veiculos = document.querySelectorAll(".cel-veiculos");
+
+			function filter_price(percentage){
+				if (percentage >= 28.57 && percentage < 42.85){
+					for (let i = 0; i < lista_img.length; i++){
+						if (!lista_img[i].classList.contains("vinte-mil")){
+							cel_veiculos[i].classList.add("escondido");
+						}
+						else{
+							cel_veiculos[i].classList.remove("escondido");
+						}
+					}
+				}
+				else if (percentage >= 42.85 && percentage < 50){
+					for (let i = 0; i < lista_img.length; i++){
+						if (!lista_img[i].classList.contains("trinta-mil")){
+							cel_veiculos[i].classList.add("escondido");
+						}
+						else{
+							cel_veiculos[i].classList.remove("escondido");
+						}
+					}
+				}
+				else {
+					for (let i = 0; i < lista_img.length; i++){
+						cel_veiculos[i].classList.remove("escondido");
+					}
+				}	
+			}
+
+			let isDragging = false;
+
+			pointer.addEventListener("mousedown", () => {
+    			isDragging = true;
+			});
+
+			document.addEventListener("mouseup", () => {
+    			isDragging = false;
+			});
+
+			document.addEventListener("mousemove", (event) => {
+    			if (!isDragging) return;
+
+    			const barRect = rangeBar.getBoundingClientRect();
+    			const barWidth = barRect.width;
+    			const pointerWidth = pointer.offsetWidth;
+    			const max = barWidth - pointerWidth / 2;
+
+    			// Posição relativa dentro da barra
+    			let newX = event.clientX - barRect.left;
+
+    			// Limitando aos extremos da barra
+    			if (newX < 0) newX = 0;
+   		 		if (newX > max) newX = max;
+
+    			// Convertendo para percentual
+    			let percentage = (newX / barWidth) * 100;
+
+    			filter_price(percentage);
+
+    			// Atualizando os estilos
+    			track.style.width = `${percentage}%`;
+    			pointer.style.left = `${percentage}%`;
+			});
+		</script>
+	</body>
+</html>
+
 
 	</body>
 </html>
